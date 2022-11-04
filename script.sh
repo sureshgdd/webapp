@@ -1,5 +1,9 @@
 #!/bin/sh
+ex=$1
 docker build -t webapp .
-docker run -d webapp:latest -p 8081:8080 \ 
---mount source=$1,target=/opt \
+sleep 10
+docker run -d  \
+-p 8081:8080 \
+--mount source=$ex,target=/opt \
 --name web_application
+webapp:latest
