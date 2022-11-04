@@ -3,7 +3,7 @@ MAINTAINER gaddamidisuresh.1994@gmail.com
 RUN mkdir /opt/tomcat/
 WORKDIR /opt/tomcat/
 RUN apt update 
-ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz /opt/tomcat
+ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz /opt/tomcat
 RUN tar xvfz apache*.tar.gz
 RUN mv apache-tomcat-9.0.64/* /opt/tomcat/.
 RUN apt install openjdk-8-jdk -y
